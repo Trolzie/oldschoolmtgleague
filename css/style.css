@@ -1,0 +1,395 @@
+body {
+	background:#F6F6F6;
+	font:400 0.9em/2em 'Quattrocento', serif;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Oswald', sans-serif;
+	padding:20px 0 10px 0;
+	margin:auto;
+}
+h1 {
+	font-weight:400;
+	line-height:1.3em;
+}
+h1, h2 {
+	padding:50px 0 10px 0;
+}
+a {
+	line-height:0;
+	text-decoration:none;
+	border-bottom:1px solid #c17c2a;
+	color:#000;
+	transition: color 0.3s;
+	-moz-transition: color 0.3s; /* Firefox 4 */
+	-webkit-transition: color 0.3s; /* Safari and Chrome */
+	-o-transition: color 0.3s; /* Opera */
+}
+p {
+	transition: opacity 0.5s;
+	-moz-transition: opacity 0.5s; /* Firefox 4 */
+	-webkit-transition: opacity 0.5s; /* Safari and Chrome */
+	-o-transition: opacity 0.5s; /* Opera */
+}
+a:hover {
+	color:#5c3304;
+}
+a.active {
+	color:#5c3304;
+}
+blockquote {
+	box-sizing:border-box;
+	font-weight:700;
+	padding:10px 0 10px 37px;
+	margin-left:200px;
+	border-left:3px solid #FF57C6;
+	width:50%;
+	max-width:450px;
+}
+nav.main-navigation {
+	padding: 20px 0;
+}
+nav.main-navigation ul li a {
+	color:#c17c2a;
+	border:none;
+}
+nav.main-navigation ul li a.active {
+	color:#5c3304;
+}
+nav.main-navigation ul li a:hover {
+	color:#5c3304;
+}
+#full-wrapper {
+	margin:auto;
+}
+#aside-wrapper {
+	position: fixed;
+	width:37.5%;
+	height:100%;
+	float:left;
+}
+#section-wrapper {
+	background:#FFF;
+	float:right;
+	width:62.5%;
+}
+#work-wrapper {
+	float:left;
+	padding:50px 0 0 0;
+	width:100%;
+}
+aside {
+	position: relative;
+	width:30%;
+	min-width: 170px;
+	margin:130px auto 0;
+	/*color:#8d76de;*/
+	color: rgba(0,0,0,0.4);
+}
+aside .logo {
+	width: 100%;
+}
+aside .logo img {
+	width: inherit;
+	height: auto;
+}
+section {
+	float:left;
+	min-width:500px;
+	width:100%;
+}
+section img {
+	width:100%;
+}
+article {
+	margin:80px 0 0 0;
+}
+article.remove-top-margin {
+	margin:0;
+}
+article img {
+	padding:10px 0;
+	width:100%;
+}
+article img.left {
+	width:77.5%;
+}
+article p.image-tag {
+	width:55%;
+	box-sizing:border-box;
+	color:#999;
+	padding:0 0 10px;
+	font-style:italic;
+	font-size:0.8em;
+	margin:auto;
+}
+article p, article ul {
+	box-sizing:border-box;
+	width:55%;
+	max-width:675px;
+	margin:auto;
+	padding:10px 0;
+}
+article h1, h2, h3, h4, h5, h6 {
+	box-sizing:border-box;
+	width:55%;
+	max-width:675px;
+}
+.date {
+	color:#CCC;
+	font-style:italic;
+	text-shadow:1px 1px 0px #FFF;
+	padding:30px 0 25px 0;
+}
+ul {
+	list-style-type:none;
+	padding:0;
+}
+pre {
+	width:75%;
+	max-width:475px;
+}
+footer {
+	box-sizing:border-box;
+	padding:120px 0;
+	width:100%;
+	float:left;
+	margin: auto;
+}
+footer p {
+	width:55%;
+	margin:auto;
+	font-size:0.8em;
+	color:#CCC;
+	font-style:italic;
+	text-shadow:1px 1px 0px #FFF;
+}
+#more-about-me {
+	display:none;
+}
+.thumb {
+	position:relative;
+	float:left;
+	width:33.33%;
+	height:auto;
+	transition: width 0.5s;
+	-moz-transition: width 0.5s; /* Firefox 4 */
+	-webkit-transition: width 0.5s; /* Safari and Chrome */
+	-o-transition: width 0.5s; /* Opera */
+}
+.thumb img {
+	padding:0;
+	-webkit-filter: grayscale(100%);
+       -moz-filter: grayscale(100%);
+         -o-filter: grayscale(100%);
+        -ms-filter: grayscale(100%);
+            filter: grayscale(100%);
+}
+.thumb:hover > img {
+	-webkit-filter: grayscale(0%);
+       -moz-filter: grayscale(0%);
+         -o-filter: grayscale(0%);
+        -ms-filter: grayscale(0%);
+            filter: grayscale(0%);
+}
+.thumb img.active {
+	-webkit-filter: grayscale(0%);
+       -moz-filter: grayscale(0%);
+         -o-filter: grayscale(0%);
+        -ms-filter: grayscale(0%);
+            filter: grayscale(0%);
+}
+.thumb span {
+	font-family: 'Oswald', sans-serif;
+	text-align:center;
+	text-shadow: 1px 1px rgba(0,0,0,0.1);
+	display:block;
+	position:absolute;
+	left:0;
+	top:0;
+	z-index:1;
+	opacity:0;
+	width:100%;
+	background:rgba(255,255,255,0.9);
+	font-size:1.6em;
+	line-height:3.2em;
+	padding:0 0 0 10px;
+	box-sizing:border-box;
+}
+.thumb span.small {
+	display:none;
+}
+.thumb:hover > span {
+	opacity:1;
+}
+/*
+ * Clears & Hacks
+*/
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+html[xmlns] .clearfix {
+	display: block;
+}
+.clear {
+	clear:both;
+}
+.codes {
+	box-sizing:border-box;
+	padding:0 0 0 200px;
+}
+
+
+
+/********************************
+			LEAGUE
+********************************/
+article.league {
+	margin-top: 0;
+}
+article img.banner {
+	padding: 0;
+}
+nav.league-navigation {
+	width: 55%;
+	margin: auto;
+}
+nav.league-navigation ul {
+	margin: 0 0 20px 0;
+}
+nav.league-navigation ul li {
+	display: inline-block;
+	margin-right: 20px;
+}
+nav.league-navigation ul li a {
+	border-bottom: none;
+}
+nav.league-navigation ul li a.active {
+	border-bottom: 2px solid #c17c2a;
+}
+.standings table tr th {
+	text-align: left;
+}
+
+.standings table tr th, .standings table tr td {
+	padding: 5px 10px;
+}
+
+.standings table tr:nth-child(odd) {
+	background-color: #f1f1f1;
+}
+.standings table tr:nth-child(even) {
+	background-color: #fbfbfb;
+}
+
+.rounds,
+.standings {
+	width: 55%;
+	margin: auto;
+}
+
+.standings table {
+	width: 100%;
+}
+.standings table tr.cutoff td {
+	padding: 5px 0;
+}
+.standings table tr.cutoff td hr {
+	border: 1px dotted #ccc;
+	border-style: none none dashed;
+	color: #fff;
+	background-color: #fff;
+}
+
+.rounds h3 {
+	margin: 0;
+}
+.rounds table tr {
+	border-bottom: 1px solid #aaa;
+	font-size: 12px;
+}
+.rounds table tr td.winner {
+	font-weight: 700;
+}
+.rounds table tr:last-child {
+	border-bottom: none;
+}
+.rounds table {
+	margin-bottom: 40px;
+}
+.rounds table tr th, .rounds table tr td {
+	padding: 4px;
+}
+.rounds table tr th:first-child,
+.rounds table tr th:last-child,
+.rounds table tr td:first-child,
+.rounds table tr td:last-child {
+	width: 44%;
+}
+.rounds table tr th:last-child,
+.rounds table tr td:last-child {
+	padding-left: 10%;
+}
+
+
+table.playoffs {
+	width: 55%;
+	margin: auto;
+	font-size: 12px;
+	margin-bottom: 40px;
+}
+table.playoffs tr th, table.playoffs tr td {
+	padding: 1px 5px;
+}
+
+table.playoffs tr td {
+	width: 1px;
+	white-space: nowrap;
+	max-width: 49px;
+	position: relative;
+}
+
+table.playoffs tr td.placeholder {
+	font-style: italic;
+	color: #bbb;
+}
+table.playoffs tr td.winner {
+	font-weight: bold;
+}
+
+table.playoffs tr td.box {
+	background-color: #efefef;
+}
+
+
+.border-right {
+	border-right: 1px solid #efefef;
+}
+.border-left {
+	border-left: 1px solid #efefef;
+}
+.border-middle:before {
+	content: " ";
+	width: 100%;
+	height: 0px;
+	border-top: 1px solid #efefef;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	margin-top: -1px;
+}
+
+table.playoffs tr:nth-child(odd) {
+	background-color: transparent;
+}
+
+table.playoffs td {
+	background-color: transparent;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
